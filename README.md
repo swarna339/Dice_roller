@@ -9,3 +9,12 @@ Consider two six-sided faces namely Die A and Die B with faces numbered from 1 t
 Solution :
 I have solved this using Python Flask web Frame work and diplay the results with Html and Css elements
 
+To Run this :
+ Flask should be installed in your system and support the anaconda environment .
+
+ 
+ Then open this project in your github 
+
+ 
+  Run command : python app.py
+ 
