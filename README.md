@@ -7,5 +7,5 @@ Consider two six-sided faces namely Die A and Die B with faces numbered from 1 t
 
 
 Solution :
-This is a Doomed Dice roller Problem 
 I have solved this using Python Flask web Frame work and diplay the results with Html and Css elements
+
