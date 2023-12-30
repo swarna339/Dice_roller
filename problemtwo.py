@@ -1,6 +1,6 @@
 def display_combinations():
     dice_dict = {}
-    # Calculating and Display of total possible combinations
+    # Calculating and Display of total possible combination
     counter = 1
     # counter is to keep track of combinations
     for i in range(1, 7):
