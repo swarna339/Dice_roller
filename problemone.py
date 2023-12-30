@@ -1,4 +1,6 @@
 def Total_Outcomes():
-    s=pow(6,2)
+    Number_of_faces=6
+    Number_of_dice=2
+    s=pow(Number_of_faces,Number_of_dice)
     a=str(s)
     return a
