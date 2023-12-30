@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Probability Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #080808;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #faf5f5;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #a02eec;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color:  #ff7230;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dice Probability Calculator</h1>
+    <table>
+        <tr>
+            <th>Sum</th>
+            <th>Probability</th>
+        </tr>
+        {% for sum, probability in probabilities.items() %}
+        <tr>
+            <td>{{ sum }}</td>
+            <td>{{ probability }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Combinations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150vh;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Die A</th>
+                <th>Die B</th>
+                <th>Sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, value in dice_dict.items() %}
+            <tr>
+                <td>{{ value['Die_A'] }}</td>
+                <td>{{ value['Die_B'] }}</td>
+                <td>{{ value['Sum'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Combinations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #131212;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 250vh;
+        }
+        h1 {
+            color: #faf5f5;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #333;
+            color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #fff;
+        }
+
+        th {
+            background-color: #555;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Possible Combinations</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Die A</th>
+                <th>Die B</th>
+                <th>Sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, value in dice_dict.items() %}
+            <tr>
+                <td>{{ value['Die_A'] }}</td>
+                <td>{{ value['Die_B'] }}</td>
+                <td>{{ value['Sum'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

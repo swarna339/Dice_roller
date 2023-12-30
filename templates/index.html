@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Interaction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0b0b0c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #e67812;
+            margin-bottom: 20px;
+        }
+
+        #dice-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out;
+            /* box-shadow: 0 4px 8px red; Add this line for shadow */
+        }
+
+        .die {
+            width: 100px;
+        height: 100px;
+        border: 2px solid #010a08;
+        border-radius: 20px;
+        background-color: #a029e6;
+        margin-right: 30px; /* Adjust this value to set the gap */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out;
+        position: relative;
+        box-shadow: 0 4px 8px rgb(243, 237, 237);
+            
+        }
+
+        .die:hover {
+            transform: scale(1.1);
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            margin-top: 20px;
+            
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            /* box-shadow: 0 4px 8px rgb(243, 237, 237); */
+        }
+
+        .grid-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #e67812;
+            color: #fff;
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+            margin-right: 25px;
+            margin-bottom: 10px;
+        }
+
+        .grid-button:hover {
+            background-color: #a029e6;
+        }
+
+        .ungrid-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #e67812;
+            color: #fff;
+            border-left: #010a08;
+            transition: background-color 0.3s ease-in-out;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .ungrid-button:hover {
+            background-color: #a029e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dice Interaction</h1>
+
+    <div id="dice-container">
+        <div class="die" id="dieA" onclick="rollDie('A')">1</div>
+        <div class="die" id="dieB" onclick="rollDie('B')">1</div>
+    </div>
+
+    <div class="button-grid">
+        <button class="grid-button" onclick="rollBothDice()">Roll Dice</button>
+        <button class="grid-button" onclick="resetDice()">Reset Dice</button>
+    </div>
+
+    <div class="button-container">
+        <button class="ungrid-button" onclick="navigateTofirstsolution()">Display Total outcomes</button>
+        <button class="ungrid-button" onclick="navigateTosecondsolution()">Display All Possible Combinations</button>
+        <button class="ungrid-button" onclick="navigateToThirdsolution()">Display Probability</button>
+    </div>
+
+    <script>
+        function rollBothDice() {
+            rollDie('A');
+            rollDie('B');
+        }
+
+        function rollDie(die) {
+            const dieElement = document.getElementById(`die${die}`);
+            const randomNumber = Math.floor(Math.random() * 6) + 1;
+            dieElement.innerText = randomNumber;
+        }
+
+        function resetDice() {
+            document.getElementById('dieA').innerText = '1';
+            document.getElementById('dieB').innerText = '1';
+        }
+
+        function navigateTofirstsolution() {
+            // Change the URL to the desired HTML document
+            window.location.href = "{{ url_for('Total_outcomes') }}"; // Replace with your HTML document's filename
+        }
+
+        function navigateTosecondsolution() {
+            // Change the URL to the desired HTML document
+            window.location.href = "{{ url_for('display') }}"; // Replace with your HTML document's filename
+        }
+
+        function navigateToThirdsolution() {
+            // Change the URL to the desired HTML document
+            window.location.href = "{{ url_for('probability') }}"; // Replace with your HTML document's filename
+        }
+    </script>
+</body>
+</html>
