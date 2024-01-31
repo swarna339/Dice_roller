@@ -1,4 +1,4 @@
-def newdice():
+def NewDice():
     list1 = list(range(1, 5))
     list2 = list(range(1, 12))
     comb1 = []
@@ -43,7 +43,7 @@ def newdice():
                 if dist[event]:
                     if orgnl[event] != dist[event]/ln:
                         return False
-                return True
+            return True
 
         return False
 

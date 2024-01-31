@@ -2,7 +2,7 @@ from flask import Flask, render_template,abort
 from problemtwo import display_combinations
 from problemthree import calculate_probability
 from problemone import Total_Outcomes
-from problemfour import newdice
+from problemfour import NewDice
 
 app = Flask(__name__)
 
@@ -49,7 +49,7 @@ def probability():
 @app.route('/newdice')
 def newdice():
     try:
-        dice_sets=newdice()
+        dice_sets=NewDice()
         return render_template('displayfour.html',dice_sets=dice_sets)
     except Exception as e:
         app.logger.error(f"An error occurred: {str(e)}")
