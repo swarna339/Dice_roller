@@ -16,7 +16,7 @@ def not_found_error(error):
 def internal_server_error(error):
     return render_template('error.html', error_code=500, error_message="Internal Server Error"), 500
 
-# Your existing routes
+# existing routes
 @app.route('/total_outcomes')
 def Total_outcomes():
     try:
