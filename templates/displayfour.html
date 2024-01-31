@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dice</title>
+</head>
+<body>
+    <h1>Newly Formed Dice</h1>
+    <ul>
+        {% for dice_set in dice_sets %}
+            <li>DICE A: {{ dice_set[0] }} | DICE B: {{ dice_set[1] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -124,6 +124,7 @@
         <button class="ungrid-button" onclick="navigateTofirstsolution()">Display Total outcomes</button>
         <button class="ungrid-button" onclick="navigateTosecondsolution()">Display All Possible Combinations</button>
         <button class="ungrid-button" onclick="navigateToThirdsolution()">Display Probability</button>
+        <button class="ungrid-button" onclick="navigateTofourthsolution()">Loki's Transformed Dice</button>
     </div>
 
     <script>
@@ -145,17 +146,21 @@
 
         function navigateTofirstsolution() {
             // Change the URL to the desired HTML document
-            window.location.href = "{{ url_for('Total_outcomes') }}"; // Replace with your HTML document's filename
+            window.location.href = "{{ url_for('Total_outcomes') }}"; 
         }
 
         function navigateTosecondsolution() {
             // Change the URL to the desired HTML document
-            window.location.href = "{{ url_for('display') }}"; // Replace with your HTML document's filename
+            window.location.href = "{{ url_for('display') }}"; 
         }
 
         function navigateToThirdsolution() {
             // Change the URL to the desired HTML document
-            window.location.href = "{{ url_for('probability') }}"; // Replace with your HTML document's filename
+            window.location.href = "{{ url_for('probability') }}";
+        }
+        function navigateTofourthsolution() {
+            // Change the URL to the desired HTML document
+            window.location.href = "{{ url_for('Newdice') }}";
         }
     </script>
 </body>
