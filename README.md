@@ -16,5 +16,5 @@ To Run this :
  Then open this project in your github 
 
  
-  Run command : python app.py
+  Run command : flask run
  
