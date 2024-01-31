@@ -1,4 +1,6 @@
+from fractions import Fraction
 def calculate_probability():
+    
     results = {}
     
     for die_a in range(1, 7):
@@ -10,6 +12,6 @@ def calculate_probability():
                 results[total_sum] = 1
     
     total_combinations = 6 * 6
-    probabilities = {sum_: count / total_combinations for sum_, count in results.items()}
+    probabilities = {sum_: Fraction(count, total_combinations)  for sum_, count in results.items()}
     
     return probabilities
